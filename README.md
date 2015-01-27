@@ -1,7 +1,7 @@
 # mocha-slack-reporter
 Mocha reporter that posts to Slack
 ##Usage
-Options
+###Options
 ```js
 reporterOptions = {
   username: "MCBrandenburg",
@@ -10,9 +10,17 @@ reporterOptions = {
   token: "dhgahsgj",
   failIcon: ":warning:",
   passIcon: ":smile:",
-  endIcon: ":bulb:"
+  endIcon: ":bulb:",
+  minimal: true,
+  failureOnly:true
 }
 ```
+*minimal* If true, complete stats and failures will be sent.
+
+*failureOnly*  If true only failures will be sent
+
+####Note: If both are true, will function like minimal
+
 ##Running the reporter
 ```js
 mocha.reporter(slackReporter, reporterOptions);
