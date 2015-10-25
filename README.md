@@ -1,7 +1,7 @@
 # mocha-slack-reporter
 Mocha reporter that posts to Slack
-##Usage
-###Options
+## Usage
+### Options
 ```js
 reporterOptions = {
   username: "MCBrandenburg",
@@ -19,9 +19,9 @@ reporterOptions = {
 
 *failureOnly*  If true only failures will be sent
 
-####Note: If both are true, will function like minimal
+#### Note: If both are true, will function like minimal
 
-##Running the reporter
+## Running the reporter
 ```js
 mocha.reporter(slackReporter, reporterOptions);
 mocha.run(function(failures) {
