@@ -27,7 +27,7 @@ class Slack
         channel: options.reporterOptions.channel,
       }
 
-      if options.reporterOptions.failicon then messageOptions.icon_emoji = options.reporterOptions.failicon
+      if options.reporterOptions.failIcon then messageOptions.icon_emoji = options.reporterOptions.failIcon
 
       slack.send(messageOptions)
       return
