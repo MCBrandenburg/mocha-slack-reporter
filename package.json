@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/MCBrandenburg/mocha-slack-reporter",
   "dependencies": {
-    "node-slack": "0.0.5"
+    "node-slack": "0.0.7"
   }
 }

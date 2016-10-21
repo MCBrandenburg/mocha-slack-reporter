@@ -4,7 +4,7 @@ class Slack
   constructor:(runner, options)->
     passes = 0
     failures = 0
-    slack = new nodeSlack options.reporterOptions.team, options.reporterOptions.token
+    slack = new nodeSlack options.reporterOptions.hook_url
     if not options.reporterOptions.minimal and not options.reporterOptions.failureOnly
       runner.on "pass", (test)->
         passes++
