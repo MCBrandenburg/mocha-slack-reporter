@@ -5,19 +5,19 @@ class Slack
     passes = 0
     failures = 0
     slack = new nodeSlack options.reporterOptions.hook_url
-    if not options.reporterOptions.minimal and not options.reporterOptions.failureOnly
-      runner.on "pass", (test)->
-        passes++
+    runner.on "pass", (test)->
+      passes++
+      if not options.reporterOptions.minimal and not options.reporterOptions.failureOnly
         messageOptions = {
           username: "PASS: " + test.fullTitle(),
           text: test.fullTitle(),
           channel: options.reporterOptions.channel,
         }
 
-        if options.reporterOptions.passIcon then messageOptions.icon_emoji = options.reporterOptions.passIcon
+      if options.reporterOptions.passIcon then messageOptions.icon_emoji = options.reporterOptions.passIcon
 
-        slack.send(messageOptions)
-        return
+      slack.send(messageOptions)
+      return
 
     runner.on "fail", (test,err)->
       failures++
