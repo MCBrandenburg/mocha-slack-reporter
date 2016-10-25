@@ -4,15 +4,14 @@ Mocha reporter that posts to Slack
 ### Options
 ```js
 reporterOptions = {
-  username: "MCBrandenburg",
-  channel: "#test",
-  team: "team",
-  token: "dhgahsgj",
-  failIcon: ":warning:",
-  passIcon: ":smile:",
-  endIcon: ":bulb:",
-  minimal: true,
-  failureOnly:true
+  username:   "MCBrandenburg",
+  channel:    "#test",
+  hook_url:   "team",
+  failIcon:   ":warning:",
+  passIcon:   ":smile:",
+  endIcon:    ":bulb:",
+  minimal:     true,
+  failureOnly: true
 }
 ```
 *minimal* If true, complete stats and failures will be sent.
@@ -23,6 +22,7 @@ reporterOptions = {
 
 ## Running the reporter
 ```js
+var slackReporter = require('mocha-slack-reporter');
 mocha.reporter(slackReporter, reporterOptions);
 mocha.run(function(failures) {
   process.on("exit", function() {
