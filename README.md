@@ -3,7 +3,7 @@ Mocha reporter that posts to Slack
 ## Usage
 ### Options
 ```js
-reporterOptions = {
+const reporterOptions = {
   username:   "MCBrandenburg",
   channel:    "#test",
   hook_url:   "team",
@@ -22,7 +22,7 @@ reporterOptions = {
 
 ## Running the reporter
 ```js
-var slackReporter = require('mocha-slack-reporter');
+const slackReporter = require('mocha-slack-reporter');
 mocha.reporter(slackReporter, reporterOptions);
 mocha.run(function(failures) {
   process.on("exit", function() {
