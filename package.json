@@ -1,6 +1,6 @@
 {
   "name": "mocha-slack-reporter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Mocha reporter that posts to Slack",
   "main": "index.js",
   "repository": {
@@ -15,7 +15,8 @@
   ],
   "author": "Michael Brandenburg",
   "contributors": [
-    "Andreas Hippler"
+    "Andreas Hippler",
+    "teyamagu"
   ],
   "license": "MIT",
   "bugs": {
